@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dl2kvmixict5y"]
+
+[ext_resource type="Script" uid="uid://31plu0e8o2rv" path="res://scripts/slot_ui.gd" id="1_nfd3l"]
+
+[node name="SlotUI" type="PanelContainer" unique_id=1482265469]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nfd3l")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=312275776]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=909086487]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "99"
+horizontal_alignment = 2
+vertical_alignment = 2

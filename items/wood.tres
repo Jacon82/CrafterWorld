@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b02cd1rrj3hyf"]
 
-[ext_resource type="Script" uid="uid://clqsknxonqxuv" path="res://Scripts/Data/item_data.gd" id="1_jduw4"]
+[ext_resource type="Texture2D" uid="uid://dq48g71cl6i21" path="res://assets/resources/tree-log.png" id="1_xw7br"]
+[ext_resource type="Script" uid="uid://clqsknxonqxuv" path="res://Scripts/Data/item_data.gd" id="2_gqln0"]
 
 [resource]
-script = ExtResource("1_jduw4")
+script = ExtResource("2_gqln0")
+name = "Wood"
+icon = ExtResource("1_xw7br")
+max_stack_size = 50
 metadata/_custom_type_script = "uid://clqsknxonqxuv"

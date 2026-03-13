@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://mgm17mm0bc2e"]
+
+[ext_resource type="Script" uid="uid://dcbahdx2g2j81" path="res://scripts/levels/main.gd" id="1_2vj2h"]
+[ext_resource type="Resource" uid="uid://d27fb85y61rdx" path="res://items/test_inventory.tres" id="2_j4d2a"]
+[ext_resource type="PackedScene" uid="uid://ck86nseljsk2o" path="res://scenes/ui/inventory_ui.tscn" id="2_y0acb"]
+
+[node name="Main" type="Node2D" unique_id=594407272]
+script = ExtResource("1_2vj2h")
+player_inventory = ExtResource("2_j4d2a")
+
+[node name="InventoryUI" parent="." unique_id=23597073 instance=ExtResource("2_y0acb")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0

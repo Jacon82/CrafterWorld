@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://d27fb85y61rdx"]
+
+[ext_resource type="Script" uid="uid://j4nbqlwwa33i" path="res://scripts/data/inventory_data.gd" id="1_mby42"]
+[ext_resource type="Script" uid="uid://f50t2xxgwb1s" path="res://scripts/data/slot_data.gd" id="2_f0hu1"]
+[ext_resource type="Resource" uid="uid://b02cd1rrj3hyf" path="res://items/wood.tres" id="3_f0hu1"]
+
+[sub_resource type="Resource" id="Resource_gmdbi"]
+script = ExtResource("2_f0hu1")
+item_data = ExtResource("3_f0hu1")
+quantity = 15
+metadata/_custom_type_script = "uid://f50t2xxgwb1s"
+
+[resource]
+script = ExtResource("1_mby42")
+slots = Array[ExtResource("2_f0hu1")]([SubResource("Resource_gmdbi"), null, null, null, null])
+metadata/_custom_type_script = "uid://j4nbqlwwa33i"
