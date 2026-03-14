@@ -3,36 +3,28 @@
 [ext_resource type="Script" uid="uid://dcbahdx2g2j81" path="res://scripts/levels/main.gd" id="1_2vj2h"]
 [ext_resource type="Resource" uid="uid://d27fb85y61rdx" path="res://items/test_inventory.tres" id="2_j4d2a"]
 [ext_resource type="PackedScene" uid="uid://ck86nseljsk2o" path="res://scenes/ui/inventory_ui.tscn" id="2_y0acb"]
-[ext_resource type="PackedScene" uid="uid://cy2i7viq52277" path="res://scenes/entities/tree.tscn" id="3_u81e1"]
 [ext_resource type="PackedScene" uid="uid://bf8iqex11bx8l" path="res://scenes/entities/player.tscn" id="4_j4d2a"]
+[ext_resource type="Texture2D" uid="uid://dam8j8mavnc16" path="res://assets/environment/patch-grass-large.png" id="5_u81e1"]
 
-[sub_resource type="Gradient" id="Gradient_j4d2a"]
-colors = PackedColorArray(0, 1, 0, 1, 0, 1, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_u81e1"]
-gradient = SubResource("Gradient_j4d2a")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6bv0"]
-texture = SubResource("GradientTexture2D_u81e1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u81e1"]
+texture = ExtResource("5_u81e1")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ubwgw"]
 tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_b6bv0")
+sources/1 = SubResource("TileSetAtlasSource_u81e1")
 
 [node name="Main" type="Node2D" unique_id=594407272]
 script = ExtResource("1_2vj2h")
 player_inventory = ExtResource("2_j4d2a")
-map_width = 200
-map_height = 200
-tree_scene = ExtResource("3_u81e1")
+map_width = null
+map_height = null
+noise_scale = null
 
 [node name="Player" parent="." unique_id=1268115109 instance=ExtResource("4_j4d2a")]
-inventory = ExtResource("2_j4d2a")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=700019060]
-zoom = Vector2(0.75, 0.75)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=60165017]
 tile_set = SubResource("TileSet_ubwgw")
