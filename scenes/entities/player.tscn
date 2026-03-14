@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq8c2ih7oy6xo" path="res://scripts/entities/player.gd" id="1_08t41"]
 [ext_resource type="Texture2D" uid="uid://cexolbsflm51g" path="res://icon.svg" id="1_ucweq"]
+[ext_resource type="Script" uid="uid://cd6q3w51xti5x" path="res://scripts/notifications/message_system.gd" id="3_1ie0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08t41"]
 size = Vector2(36, 14)
@@ -12,6 +13,7 @@ radius = 51.0
 [node name="Player" type="CharacterBody2D" unique_id=1268115109]
 z_index = 10
 script = ExtResource("1_08t41")
+speed = 400.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=14712460]
 texture = ExtResource("1_ucweq")
@@ -24,3 +26,10 @@ shape = SubResource("RectangleShape2D_08t41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=555054311]
 shape = SubResource("CircleShape2D_08t41")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=83428185]
+script = ExtResource("3_1ie0h")
+
+[node name="MessageLabel" type="Label" parent="HUD" unique_id=2083648369]
+offset_right = 40.0
+offset_bottom = 23.0
